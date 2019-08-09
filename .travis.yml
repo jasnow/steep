@@ -1,8 +1,8 @@
 sudo: false
 language: ruby
 rvm:
-  - 2.5.5
   - 2.6.3
 before_install: gem install bundler -v 1.13.7
-script: bundle exec rake test smoke
+script:
+  - bundle exec rake reset parser build test smoke
 cache: bundler
